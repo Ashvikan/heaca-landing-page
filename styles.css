@@ -1,8 +1,7 @@
-/* styles.css */
 @font-face {
     font-family: 'Touche';
-    src: url('path_to_your_font/Touche.woff2') format('woff2'), /* Modern Browsers */
-         url('path_to_your_font/Touche.woff') format('woff'); /* Older Browsers */
+    src: url('path_to_your_font/Touche.woff2') format('woff2'),
+         url('path_to_your_font/Touche.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -12,62 +11,61 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: 'Touche', Arial, sans-serif;
-    background: #ffebef; /* Adjust background gradient here if needed */
+    background: linear-gradient(to bottom, #FDF6F6 0%, #F3B0B0 90%);
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
 }
 
-header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-.logo {
-    width: 370; /* Adjust based on your logo */
-}
-
-nav a {
-    margin-right: 20px;
-    color: #333;
-    text-decoration: none;
+header .logo {
+    width: 15%;
+    min-width: 120px;
+    max-width: 250px;
 }
 
 main {
-    text-align: center;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    text-align: left;
 }
 
-h1 {
-    font-size: 111px; /* Adjust based on your design */
-    color: #2C3A42;
+.text-content {
+    position: relative;
+    padding: 20px;
 }
 
-p {
-    font-size: 18px;
-    color: #2C3A42;
-}
-
-footer p {
-    font-size: 16px;
-    margin: 20px;
-}
-
-footer a {
+main h1 {
+    font-size: 2.5em; /* Responsive font size */
     color: #333;
-    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid orange;
+    padding: 0;
+    animation: blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange }
+}
+
+main p {
+    font-size: 1em; /* Responsive font size */
+    color: #555;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    header .logo {
+        width: 25%;
+    }
+
+    main h1 {
+        font-size: 2em;
+    }
 }
