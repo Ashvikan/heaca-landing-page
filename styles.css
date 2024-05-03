@@ -1,0 +1,73 @@
+/* styles.css */
+@font-face {
+    font-family: 'Touche';
+    src: url('path_to_your_font/Touche.woff2') format('woff2'), /* Modern Browsers */
+         url('path_to_your_font/Touche.woff') format('woff'); /* Older Browsers */
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Touche', Arial, sans-serif;
+    background: #ffebef; /* Adjust background gradient here if needed */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.logo {
+    width: 370; /* Adjust based on your logo */
+}
+
+nav a {
+    margin-right: 20px;
+    color: #333;
+    text-decoration: none;
+}
+
+main {
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 111px; /* Adjust based on your design */
+    color: #2C3A42;
+}
+
+p {
+    font-size: 18px;
+    color: #2C3A42;
+}
+
+footer p {
+    font-size: 16px;
+    margin: 20px;
+}
+
+footer a {
+    color: #333;
+    text-decoration: none;
+}
