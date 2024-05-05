@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 phase++;  // Move to the next phrase
                 text = ""; // Clear the text for the next phrase
                 index = 0; // Reset the index for the next phrase
-                setTimeout(typeWriter, 1000); // Start the next phrase after a delay
+                setTimeout(typeWriter, 2000); // Start the next phrase after a delay
             }
         }
     }
