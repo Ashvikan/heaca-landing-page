@@ -7,65 +7,66 @@
 }
 
 html, body {
-    height: 100%;
     margin: 0;
     padding: 0;
     font-family: 'Touche', Arial, sans-serif;
-    background: linear-gradient(to bottom, #FDF6F6 0%, #F3B0B0 90%);
+    background: linear-gradient(to bottom, #FDF6F6 30%, #F3B0B0 100%);
+    height: 100%;
+    overflow-x: hidden;
 }
 
 .container {
-    position: relative;
-    width: 90%;
+    width: 100%;
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 20px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px;
+    position: relative;
+    z-index: 2;
 }
 
 header .logo {
-    width: 15%;
-    min-width: 120px;
-    max-width: 250px;
+    width: 150px;  /* Adjust size according to your mockup */
+}
+
+.background-figure {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('Group\ 6.png') no-repeat;
+    background-size: cover; /* Adjust as necessary */
+    z-index: 1;
 }
 
 main {
-    text-align: left;
-}
-
-.text-content {
     position: relative;
-    padding: 20px;
+    z-index: 2;
+    padding: 40px 20px;
 }
 
-main h1 {
-    font-size: 2.5em; /* Responsive font size */
+.text-content h1 {
+    font-size: 3em;
     color: #333;
-    font-weight: bold;
-    margin-bottom: 20px;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 3px solid orange;
-    padding: 0;
-    animation: blink-caret 0.75s step-end infinite;
+    margin: 0 0 20px;
+    padding-right: 50%;  /* Prevents text from overlapping the background shape */
 }
 
-@keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: orange }
-}
-
-main p {
-    font-size: 1em; /* Responsive font size */
+.text-content p {
+    font-size: 1.2em;
     color: #555;
     line-height: 1.6;
 }
 
 @media (max-width: 768px) {
-    header .logo {
-        width: 25%;
-    }
-
-    main h1 {
+    .text-content h1 {
         font-size: 2em;
     }
 }

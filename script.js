@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', function() {
     let phase = 0;
     let text = "";
     let index = 0;
-    const deleteSpeed = 50;
     const typingSpeed = 100;
 
     const phrases = [
@@ -18,21 +17,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 headline.innerHTML = text;
                 index++;
                 setTimeout(typeWriter, typingSpeed);
-            } else {
-                setTimeout(deleteText, 1000); // wait before starting to delete
+            } else if (phase < phrases.length - 1) {
+                phase++;  // Move to the next phrase
+                text = ""; // Clear the text for the next phrase
+                index = 0; // Reset the index for the next phrase
+                setTimeout(typeWriter, 1000); // Start the next phrase after a delay
             }
-        }
-    }
-
-    function deleteText() {
-        if (text.length > 0) {
-            text = text.substring(0, text.length - 1);
-            headline.innerHTML = text;
-            setTimeout(deleteText, deleteSpeed);
-        } else {
-            index = 0;
-            phase++;
-            setTimeout(typeWriter, typingSpeed); // wait before starting to type new text
         }
     }
 
