@@ -21,18 +21,20 @@ html, body {
     margin: auto;
     position: relative;
     overflow: hidden;
+    padding: 5vh 10%;
 }
 
 header {
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-start; /* Adjust based on your layout preference */
     padding: 20px;
     position: relative;
     z-index: 2;
 }
 
 header .logo {
-    width: 250px;  /* Adjust size according to your mockup */
+    width: 150px;  /* Adjust based on actual logo size */
+    height: auto;
 }
 
 .background-figure {
@@ -41,32 +43,44 @@ header .logo {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('Group\ 6.png') no-repeat;
-    background-size: cover; /* Adjust as necessary */
+    background: url('Group\ 6.png') no-repeat center center;
+    background-size: cover;
     z-index: 1;
 }
 
 main {
     position: relative;
     z-index: 2;
-    padding: 40px 20px;
+    padding: 40px 20px; /* Consistent padding */
 }
 
 .text-content h1 {
     font-size: 3em;
     color: #333;
     margin: 0 0 20px;
-    padding-right: 50%;  /* Prevents text from overlapping the background shape */
+    padding-right: 50%; /* Adjust if text overlaps with background on wide screens */
+    line-height: 1.2; /* Tighten the line height for the title */
 }
 
 .text-content p {
     font-size: 1.2em;
     color: #555;
     line-height: 1.6;
+    margin-right: 30%; /* Prevent text from spanning full width on larger screens */
 }
 
 @media (max-width: 768px) {
+    header .logo {
+        width: 120px; /* Smaller logo on mobile */
+    }
+
     .text-content h1 {
-        font-size: 2em;
+        font-size: 2.5em; /* Smaller font size for mobile */
+        padding-right: 10%; /* Less padding on smaller screens */
+    }
+
+    .text-content p {
+        font-size: 1.2em; /* Slightly larger font for mobile readability */
+        margin-right: 10%; /* Narrower margin for smaller screens */
     }
 }
