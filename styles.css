@@ -62,8 +62,8 @@ main {
     }
 
     .text-content h1 {
-        font-size: 24px;
-        min-height: 64px; /* Adjust the height for mobile view */
+        font-size: 30px;
+        min-height: 88px; /* Adjust the height for mobile view */
     }
 
 
