@@ -43,7 +43,7 @@ main {
 .text-content h1 {
     font-size: 48px;
     color: #333;
-    margin: 0;
+    margin: 0 0 40px;
     padding: 0 5%;
     min-height: 120px; /* Set a fixed height to prevent movement during typing */
 }
@@ -63,9 +63,9 @@ main {
 
     .text-content h1 {
         font-size: 30px;
-        min-height: 88px; /* Adjust the height for mobile view */
+        height: 120px; /* Fixed height adjusted to prevent movement */
+        margin: 0 0 0px; /* More space added below the heading */
     }
-
 
     .text-content p {
         font-size: 16px;
