@@ -57,7 +57,7 @@ main {
 
 @media (max-width: 768px) {
     body {
-        background: url('BG/iPhone 14 & 15 Pro - 2.png') no-repeat center center fixed;
+        background: url('BG/iPhone 14 & 15 Pro - 2.svg') no-repeat center center fixed;
         background-size: cover;
     }
 
