@@ -1,10 +1,18 @@
 @font-face {
     font-family: 'Touche';
-    src: url('path_to_your_font/Touche.woff2') format('woff2'),
-         url('path_to_your_font/Touche.woff') format('woff');
+    src: url('./fonts/Touche-Regular-BF642a2ebfe9ff0.woff2') format('woff2'),
+         url('./fonts/Touche-Regular-BF642a2ebfe9ff0.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
+  
+  @font-face {
+    font-family: 'Touche';
+    src: url('./fonts/Touche-Bold-BF642a2ec04a3ad.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+    
 
 html, body {
     height: 100%;

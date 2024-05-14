@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const typingSpeed = 100;
 
     const phrases = [
-        "This website is under construction",
+        "We are working on something new",
         "Healthy environments create sustainable results"
     ];
 
