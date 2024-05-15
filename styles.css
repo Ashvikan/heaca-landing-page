@@ -108,7 +108,7 @@ main {
     .text-content p {
         font-size: 16px;
         margin: 0 0 20px;
-        font-weight: bold; 
+        font-weight: normal; 
     }
 }
 
