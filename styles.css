@@ -10,7 +10,7 @@
     font-family: 'Touche';
     src: url('./fonts/Touche-Bold-BF642a2ec04a3ad.otf') format('opentype');
     font-weight: bold;
-    font-style: normal;
+    font-style: bold;
 }
 
 html, body {
@@ -126,6 +126,6 @@ main {
     .text-content p {
         font-size: 14px;
         margin: 0 0 20px;
-        font-weight: bold; 
+        font-weight: normal; 
     }
 }
