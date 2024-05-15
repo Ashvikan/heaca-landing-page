@@ -102,12 +102,14 @@ main {
 
     .text-content h1 {
         font-size: 30px;
-        margin: 0 0 20px;
+        margin: 0 0 40px;
         height: 80px; /* Adjust the height for smaller screens */
     }
 
     .text-content p {
         font-size: 16px;
+        margin: 0 0 20px;
+        font-weight: normal; 
     }
 }
 
@@ -123,5 +125,7 @@ main {
 
     .text-content p {
         font-size: 14px;
+        margin: 0 0 20px;
+        font-weight: normal; 
     }
 }
