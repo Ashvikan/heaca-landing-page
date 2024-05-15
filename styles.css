@@ -1,7 +1,6 @@
 @font-face {
     font-family: 'Touche';
-    src: url('./fonts/Touche-Regular-BF642a2ebfe9ff0.woff2') format('woff2'),
-         url('./fonts/Touche-Regular-BF642a2ebfe9ff0.woff') format('woff');
+    src: url('./fonts/Touche-Regular-BF642a2ebfe9ff0.otf') format('openType');
     font-weight: normal;
     font-style: normal;
 }
