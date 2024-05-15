@@ -29,8 +29,7 @@ html, body {
     margin: 0 auto;
     padding: 40px 20px;
     box-sizing: border-box;
-}
-
+    
 header {
     display: flex;
     justify-content: space-between;
@@ -62,22 +61,25 @@ main {
 
 .text-content {
     padding-top: 10vh;
-    text-align: center;
+    text-align: left; /* Changed from center to left */
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .text-content h1 {
     font-size: 48px;
     color: #333;
-    margin: 0 0 40px;
-    padding: 0 5%;
-    min-height: 120px;
+    margin: 0 0 20px;
+    font-weight: bold;
+    height: 120px; /* Reserve space for the typing effect */
+
 }
 
 .text-content p {
     font-size: 18px;
     color: #555;
     line-height: 1.6;
-    padding: 0 5%;
+    margin: 0 0 20px;
 }
 
 @media (max-width: 768px) {
@@ -94,10 +96,14 @@ main {
         width: 24px;
     }
 
+    .text-content {
+        padding-top: 15vh;
+    }
+
     .text-content h1 {
         font-size: 30px;
-        height: 120px;
         margin: 0 0 20px;
+        height: 80px; /* Adjust the height for smaller screens */
     }
 
     .text-content p {
@@ -106,8 +112,13 @@ main {
 }
 
 @media (max-width: 480px) {
+    .text-content {
+        padding-top: 15vh;
+    }
+
     .text-content h1 {
         font-size: 24px;
+        height: 60px; /* Adjust the height for smaller screens */
     }
 
     .text-content p {

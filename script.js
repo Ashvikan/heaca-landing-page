@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let text = "";
     let index = 0;
     const typingSpeed = 100;
+    let typingTimeout;
 
     const phrases = {
         en: [
@@ -32,17 +33,19 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     function typeWriter(language = 'en') {
+        if (typingTimeout) clearTimeout(typingTimeout);
+
         if (phase < phrases[language].length) {
             if (index < phrases[language][phase].length) {
                 text += phrases[language][phase].charAt(index);
                 headline.innerHTML = text;
                 index++;
-                setTimeout(() => typeWriter(language), typingSpeed);
+                typingTimeout = setTimeout(() => typeWriter(language), typingSpeed);
             } else if (phase < phrases[language].length - 1) {
                 phase++;
                 text = "";
                 index = 0;
-                setTimeout(() => typeWriter(language), 2000);
+                typingTimeout = setTimeout(() => typeWriter(language), 2000);
             }
         }
     }
@@ -52,6 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
         text = "";
         index = 0;
         headline.innerHTML = "";
+        if (typingTimeout) clearTimeout(typingTimeout);
         typeWriter(language);
 
         document.getElementById('text-1').innerHTML = textContent[language][0];
