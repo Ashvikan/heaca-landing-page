@@ -109,7 +109,7 @@ main {
     .text-content p {
         font-size: 16px;
         margin: 0 0 20px;
-        font-weight: normal; 
+        font-weight: bold; 
     }
 }
 
@@ -126,6 +126,6 @@ main {
     .text-content p {
         font-size: 14px;
         margin: 0 0 20px;
-        font-weight: normal; 
+        font-weight: bold; 
     }
 }
