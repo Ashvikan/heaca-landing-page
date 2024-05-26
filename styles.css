@@ -12,23 +12,17 @@
     font-style: bold;
 }
 
-html {
+html, body {
     height: 100%;
-}
-
-body {
-    min-height: 100%;
     margin: 0;
     padding: 0;
     font-family: 'Touche', Arial, sans-serif;
     background: url('BG/Desktop - 4.png') no-repeat center center fixed;
     background-size: cover;
-    display: flex;
-    flex-direction: column;
 }
 
 .container {
-    flex: 1;
+    position: relative;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
@@ -46,6 +40,7 @@ header .logo {
     width: 250px;
     height: auto;
     margin: 20px 0;
+    cursor: pointer;
 }
 
 .language-toggle {
@@ -114,18 +109,15 @@ main {
     padding: 40px;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 100%;
+    max-width: 800px;
     width: 100%;
-    box-sizing: border-box;
     margin: 0 auto;
-    box-sizing: border-box; 
-
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
 }
 
 .form-group {
     display: flex;
     flex-direction: column;
-    width: 100%;
 }
 
 .contact-form label {
@@ -136,7 +128,7 @@ main {
 
 .contact-form input,
 .contact-form textarea {
-    width: calc(100% - 30px);
+    width: 100%;
     padding: 15px;
     border: 1px solid #ddd;
     border-radius: 10px;
@@ -144,7 +136,7 @@ main {
     font-size: 16px;
     background: #fff;
     transition: border-color 0.3s, box-shadow 0.3s;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
 }
 
 .contact-form input:focus,
@@ -165,10 +157,26 @@ main {
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s;
-    
+    text-decoration: none;
 }
 
 .contact-form button:hover {
+    background-color: #e53935;
+}
+
+.contact-button {
+    padding: 15px 30px;
+    background-color: #d32f2f;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-family: 'Touche', Arial, sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.contact-button:hover {
     background-color: #e53935;
 }
 
@@ -187,23 +195,6 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.contact-button {
-    padding: 15px 30px;
-    background-color: #d32f2f;
-    color: #fff;
-    border: none;
-    border-radius: 30px;
-    font-family: 'Touche', Arial, sans-serif;
-    font-size: 16px;
-    cursor: pointer;
-    text-decoration: none; 
-
-}
-
-.contact-button:hover {
-    background-color: #e53935;
 }
 
 @media (max-width: 768px) {
