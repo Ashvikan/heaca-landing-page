@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - HEACA</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="HeacaLogo.png" alt="HEACA Logo" class="logo">
+            <div class="language-toggle">
+                <img src="icons/english-flag.png" alt="English" id="en-flag" class="flag" style="display: none;">
+                <img src="icons/danish-flag.png" alt="Danish" id="da-flag" class="flag">
+            </div>
+        </header>
+        <main>
+            <div class="contact-content">
+                <h2>We would love to hear from you</h2>
+                <p>Please leave your contact information and we'll make sure to contact you personally.</p>
+                <form class="contact-form" action="#" method="post">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email*</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="text" id="phone" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+                <p>If you prefer, you can also contact us on <a href="mailto:info@heaca.dk">info@heaca.dk</a></p>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
